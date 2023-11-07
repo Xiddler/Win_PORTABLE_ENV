@@ -1,0 +1,21 @@
+filetype plugin indent on
+syntax on
+set backspace=indent,eol,start
+set hidden
+let $RTP=split(&runtimepath, ',')[0]
+let $RC="$HOME/.vimrc"
+set noswapfile
+" remove highlighting from underscores in .md files 
+hi link markdownError normal 
+
+" Donaghs - for use in containers
+set <esc>=jk
+let mapleader=','
+nnoremap <space> :
+set encoding=utf-8
+" save
+cmap s<space> :w<cr>
+" save and quit
+cmap ww :wq!<cr> 
+set timeout timeoutlen=3000 ttimeoutlen=100
+
