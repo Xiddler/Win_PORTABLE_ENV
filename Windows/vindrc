@@ -1,0 +1,24 @@
+ " Opened 2023-11-13
+ " from website 
+"Options
+set shell = cmd
+set cmd_fontsize = 14
+set cmd_fontname = Consolas
+set blockstylecaret
+set blockstylecaret_mode = solid
+
+" bindings
+imap <capslock> {<ctrl>}
+
+inoremap <ralt><ralt> <easyclick><click_left>
+inoremap <rctrl><rctrl> <gridmove><click_left>
+inoremap <win-enter> <window_resizer>
+
+noremap <ctrl-1> :! gvim<cr>
+noremap <ctrl-2> :e http://example.com<cr>
+
+enoremap t gg"0yGp
+
+autocmd AppLeave * <to_insert>
+autocmd AppEnter,EdiNormalEnter vim.exe <to_resident>
+
